@@ -1,5 +1,11 @@
 <template>
-    <div></div>
+    <div>
+      <ul>
+        <li :id="`id${todo.id}`" v-for="todo in todos" :key="todo.id">
+          {{todo.text}}
+        </li>
+      </ul>
+    </div>
   </template>
   
   <script setup lang="ts">
